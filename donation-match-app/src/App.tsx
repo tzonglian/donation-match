@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
+import ExampleChallengePage from "./example-pages/ExampleChallengePage";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
               <ul className="nav-bar">
                 <li>
                   <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/example/challenge">Example</Link>
                 </li>
                 <li>
                   <Link to="/login">Login</Link>
@@ -34,6 +38,12 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
             <Route path="/about" element={<About />}></Route>
+            <Route
+              path="/example/challenge"
+              element={<ExampleChallengePage />}
+            ></Route>
+            {/* <Route path="/example/user" element={<ExampleUser />}></Route> */}
+            <Route path="*" element={<h1>Not Found</h1>}></Route>
           </Routes>
         </body>
       </Router>
@@ -42,14 +52,14 @@ function App() {
 }
 
 function Login() {
-  return <h2>Login</h2>;
+  return <h2>Login TODO</h2>;
 }
 function Signup() {
-  return <h2>Signup</h2>;
+  return <h2>Signup TODO</h2>;
 }
 
 function About() {
-  return <h2>About</h2>;
+  return <h2>About TODO</h2>;
 }
 
 export default App;

@@ -11,6 +11,7 @@
   color: var(--main-white);
   background-color: var(--main-blue);
   min-height: 100vh;
+  height: 100%
 }
 
 .App-header {
@@ -21,7 +22,6 @@
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: var(--main-white);
-  padding: 0;
 }
 
 .nav-bar {
@@ -31,6 +31,7 @@
   align-items: center;
   width: 100%;
   height: 10%;
+  font-weight: bold;
 }
 
 ul {
@@ -45,7 +46,7 @@ a {
 }
 
 a:hover {
-  font-weight: bold;
+  text-decoration-line: underline
 }
 
 .App-body {
@@ -59,4 +60,30 @@ a:hover {
   color: var(--main-blue);
   background-color: var(--main-green);
   font-weight: bold;
+  text-wrap: pretty;
+}
+
+.super-section {
+  background-color: var(--main-pink);
+  color: var(--main-white);
+}
+
+button {
+  background-color: var(--main-orange);
+  color: var(--main-white);
+  border: none;
+  font-size: 1.5em;
+  padding: 2%;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+button:hover {
+  text-decoration-line: underline;
+  cursor:pointer;
+}
+
+.section-header-link {
+  font-size: 1.5rem;
+  padding: 0;
 }

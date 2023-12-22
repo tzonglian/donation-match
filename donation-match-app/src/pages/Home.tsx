@@ -13,11 +13,11 @@ export default function Home() {
         <p>
           You create a Donation Match Challenge, selecting a charity or group of
           charities close to your heart. Then invite friends to participate by
-          making a donation to the chosen causes. The twist? The user pledges to
-          match every donation their friends contribute, doubling the overall
+          making a donation to your chosen causes. The twist? The user pledges
+          to match every donation their friends contribute, doubling the overall
           impact. It's a friendly competition to increase true donation matching
           (doubling money which would not have been donated otherwise) and
-          create a ripple effect of positive change.
+          create a ripple effect of positive change!
         </p>
       </div>
     </>
