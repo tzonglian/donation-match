@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import ExampleChallengePage from "./example-pages/ExampleChallengePage";
+import ExampleUserPage from "./example-pages/ExampleUserPage";
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
               path="/example/challenge"
               element={<ExampleChallengePage />}
             ></Route>
-            {/* <Route path="/example/user" element={<ExampleUser />}></Route> */}
+            <Route path="/example/user" element={<ExampleUserPage />}></Route>
             <Route path="*" element={<h1>Not Found</h1>}></Route>
           </Routes>
         </body>

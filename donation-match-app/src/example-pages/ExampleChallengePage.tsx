@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { dummyUser1, dummyChallenge1 } from "./dummyData";
+import { Link } from "react-router-dom";
 
 export default function ExampleChallengePage() {
   const [nameToUse, setNameToUse] = useState(dummyChallenge1.username);
@@ -21,14 +22,17 @@ export default function ExampleChallengePage() {
           {/* TODO cases: if 1, if 2, if 3-5, if 6+ */}
           {/* TODO: username links to their profile page */}
           {/* TODO: charity name links to their website */}
-          <u>{nameToUse}</u> challenges you to donate to{" "}
+          <Link to="/example/user" className="section-header-link">
+            <u>{nameToUse}</u>
+          </Link>{" "}
+          challenges you to donate to{" "}
           <a
             className="section-header-link"
             href={dummyChallenge1.againstMalariaURL}
             target="_blank"
             rel="noreferrer"
           >
-            <u>{dummyChallenge1.charitiesAllowed}</u>
+            <u>{dummyChallenge1.charities}</u>
           </a>
         </h2>
         <p>
@@ -39,7 +43,7 @@ export default function ExampleChallengePage() {
         <h2>How does this work?</h2>
         <p>
           {nameToUse} has agreed to match your donations to{" "}
-          <u>{dummyChallenge1.charitiesAllowed}</u>, up to $
+          <u>{dummyChallenge1.charities}</u>, up to $
           <u>{dummyChallenge1.pledgePerUser}</u>. {nameToUse} has challenged{" "}
           {dummyChallenge1.numMatchers - 1} other people to match this, for a
           maximum of $<u>{dummyChallenge1.pledgeAmountTotal}</u>. There is $
@@ -51,7 +55,7 @@ export default function ExampleChallengePage() {
         <h2>How do I participate?</h2>
         <p>
           1. Click the "Donate" button below to make a donation to{" "}
-          <u>{dummyChallenge1.charitiesAllowed}</u>. <br />
+          <u>{dummyChallenge1.charities}</u>. <br />
           You will be redirected to the donation page for this charity. <br />
           <br />
           2. Once you have made your donation, take a screenshot of the donation
@@ -61,10 +65,12 @@ export default function ExampleChallengePage() {
         </p>
       </div>
       <div className="button-group">
-        <button onClick={openCharityWebsite}>
+        <button className="large-button" onClick={openCharityWebsite}>
           I accept the challenge to donate!
         </button>
-        <button>I am uploading screenshot proof!</button>
+        <button className="large-button">
+          I am uploading screenshot proof!
+        </button>
       </div>
     </>
   );
