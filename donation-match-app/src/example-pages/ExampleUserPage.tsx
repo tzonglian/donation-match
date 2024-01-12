@@ -6,6 +6,7 @@ import {
   dummyChallenge3,
 } from "./dummyData";
 import example_user from "./example_user.png";
+import { Link } from "react-router-dom";
 
 export default function ExampleUserPage() {
   const [nameToUse, setNameToUse] = useState(dummyChallenge1.username);
@@ -32,7 +33,13 @@ export default function ExampleUserPage() {
           Challenges hosted: {dummyUser1.challengeIds.size} <br />
           Challenges participated: 1 <br />
         </p>
+        <Link to="/create-challenge">
+          <button className="create-challenge-button">
+            Create a new challenge!
+          </button>
+        </Link>
       </div>
+      {/* TODO: Create challenges hosting/participating sections */}
       <div className="section">
         <h2>Challenges hosted</h2>
 
@@ -101,12 +108,6 @@ export default function ExampleUserPage() {
               <br />
             </p>
           </div>
-        </div>
-
-        <div>
-          <button className="create-challenge-button">
-            Create a new challenge!
-          </button>
         </div>
       </div>
 

@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
 import Home from "./pages/Home";
 import ExampleChallengePage from "./example-pages/ExampleChallengePage";
 import ExampleUserPage from "./example-pages/ExampleUserPage";
+import CreateChallenge from "./pages/CreateChallenge";
 
 function App() {
   return (
@@ -18,10 +20,10 @@ function App() {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/example/challenge">Example</Link>
+                  <Link to="/example/challenge">Example Challenge</Link>
                 </li>
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link to="/example/user">Example Login</Link>
                 </li>
                 <li>
                   <Link to="/signup">Signup</Link>
@@ -44,6 +46,10 @@ function App() {
               element={<ExampleChallengePage />}
             ></Route>
             <Route path="/example/user" element={<ExampleUserPage />}></Route>
+            <Route
+              path="/create-challenge"
+              element={<CreateChallenge />}
+            ></Route>
             <Route path="*" element={<h1>Not Found</h1>}></Route>
           </Routes>
         </body>
